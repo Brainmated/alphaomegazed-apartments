@@ -35,11 +35,5 @@
         <artifactId>mssql-jdbc</artifactId>
         <scope>runtime</scope>
     </dependency>
-    <!-- Hibernate Connector -->
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
-      <version>YOUR_HIBERNATE_VERSION</version>
-    </dependency>
   </dependencies>
 </project>
