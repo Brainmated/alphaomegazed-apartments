@@ -35,5 +35,11 @@
         <artifactId>mssql-jdbc</artifactId>
         <scope>runtime</scope>
     </dependency>
+    <!-- Hibernate ORM -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.6.9.Final</version>
+    </dependency>
   </dependencies>
 </project>
