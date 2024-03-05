@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import main.java.com.alphaomegazed.aoz_apartments.repository_interfaces.UserRepository;
+import main.java.com.alphaomegazed.aoz_apartments.model.User;
 
 /* User Management Class */
 @Service
