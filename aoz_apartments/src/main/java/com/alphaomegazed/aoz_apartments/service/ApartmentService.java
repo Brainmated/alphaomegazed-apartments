@@ -3,7 +3,9 @@ package main.java.com.alphaomegazed.aoz_apartments.service;
 import com.alphaomegazed.aoz_apartments.*;
 
 import main.java.com.alphaomegazed.aoz_apartments.model.Apartment;
-import or.springframework.beans.factory.annotation.Autowired;
+import main.java.com.alphaomegazed.aoz_apartments.repository_interfaces.ApartmentRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +21,7 @@ public class ApartmentService {
     }
 
     // Logic to save an apartment in the database
-    public createApartment(Apartment apartment) {
+    public Apartment createApartment(Apartment apartment) {
         return apartmentRepository.save(apartment);
     }
 
