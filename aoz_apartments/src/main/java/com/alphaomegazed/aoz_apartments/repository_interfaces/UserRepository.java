@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional; //this is part of the java.util package, but it needs to be included
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
+    // Used by UserDetailService to define wether or not the user exists
     Optional<User> findByUsername(String username);
 
     Boolean existsByUsername(String username);
