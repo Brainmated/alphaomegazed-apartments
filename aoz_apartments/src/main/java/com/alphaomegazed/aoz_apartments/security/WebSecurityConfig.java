@@ -14,7 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         /* Basic authentication is used for simplicity */
         http
-                .csrf().disable()
+                .csrf().enable()
                 .authorizeRequests() // fixed from authorizeRequest(), it's plural
                 .antMatchers("/createUser").permitAll()
                 .anyRequest().authenticated()
