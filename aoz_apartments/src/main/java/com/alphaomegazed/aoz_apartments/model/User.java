@@ -14,7 +14,6 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
     @Column(unique = true, nullable = false)
@@ -23,7 +22,24 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    // adding setters methods to have some returns
+    // Getters-------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    // Setters-------------------------------------------------
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }

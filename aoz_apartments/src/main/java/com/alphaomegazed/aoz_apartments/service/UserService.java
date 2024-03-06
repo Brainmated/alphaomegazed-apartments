@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import main.java.com.alphaomegazed.aoz_apartments.repository_interfaces.UserRepository;
 import main.java.com.alphaomegazed.aoz_apartments.model.User;
 
-/* User Management Class */
+//Logic for User management
 @Service
 public class UserService {
 
@@ -14,6 +14,11 @@ public class UserService {
     private UserRepository userRepository;
 
     public User createUser(String username, String password) {
+
+        // Input validation for dupliactes
+        if (userRepository.existsByUsername(username)) {
+            throw new RuntimeException("User " + username + " already exists.");
+        }
 
         User user = new User();
         user.setUsername(username);
