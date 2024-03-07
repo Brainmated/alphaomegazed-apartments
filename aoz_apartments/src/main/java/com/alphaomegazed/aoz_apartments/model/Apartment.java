@@ -1,6 +1,6 @@
 package com.alphaomegazed.aoz_apartments.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Map;
 

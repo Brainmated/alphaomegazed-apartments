@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+
+    <entity class="com.alphaomegazed.aoz_apartments.model.Apartment" access="PROPERTY">
+        <table name="apartment"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="IDENTITY"/>
+            </id>
+            <basic name="picture"/>
+            <basic name="address"/>
+            <basic name="area"/>
+            <basic name="monthlyRent"/>
+            <element-collection name="rooms" target-class="java.lang.Integer">
+                <collection-table name="apartment_rooms">
+                    <join-column name="apartment_id"/>
+                </collection-table>
+                <map-key-column name="room_name" type="java.lang.String"/>
+            </element-collection>
+        </attributes>
+    </entity>
+
+</entity-mappings>
