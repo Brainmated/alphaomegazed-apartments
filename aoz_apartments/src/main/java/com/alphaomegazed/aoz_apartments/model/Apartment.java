@@ -1,9 +1,16 @@
 package com.alphaomegazed.aoz_apartments.model;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType; //included for identity strategy
+
 import java.util.Map;
 
 @Entity
+@Table(name = "apartment")
 public class Apartment {
 
     @Id

@@ -1,5 +1,7 @@
 package com.alphaomegazed.aoz_apartments.dto;
 
+import org.springframework.context.annotation.Profile;
+
 public class UserCreationDto {
     private String username;
     private String password;

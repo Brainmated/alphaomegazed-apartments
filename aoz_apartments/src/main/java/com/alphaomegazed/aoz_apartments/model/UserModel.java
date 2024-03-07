@@ -2,6 +2,9 @@ package com.alphaomegazed.aoz_apartments.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import org.springframework.context.annotation.Profile;
+
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;

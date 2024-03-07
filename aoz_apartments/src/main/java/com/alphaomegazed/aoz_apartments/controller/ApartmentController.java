@@ -11,7 +11,6 @@ import java.util.List;
  * It also validates incoming data and sends back http responses.
  */
 @RestController
-@RequestMapping("/apartments")
 public class ApartmentController {
 
     private final ApartmentService apartmentService;

@@ -1,6 +1,7 @@
 package com.alphaomegazed.aoz_apartments.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.alphaomegazed.aoz_apartments.repository_interfaces.UserRepository;
@@ -8,6 +9,7 @@ import com.alphaomegazed.aoz_apartments.model.UserModel;
 
 //Logic for User management
 @Service
+@Profile("regular")
 public class UserService {
 
     @Autowired
