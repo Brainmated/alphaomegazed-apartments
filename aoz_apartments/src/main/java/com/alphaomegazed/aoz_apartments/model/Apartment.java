@@ -1,11 +1,6 @@
 package com.alphaomegazed.aoz_apartments.model;
 
-import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType; //included for identity strategy
+import jakarta.persistence.*;
 
 import java.util.Map;
 
@@ -70,6 +65,7 @@ public class Apartment {
         return monthlyRent;
     }
 
+    @ElementCollection
     public Map<String, Integer> getRooms() {
         return rooms;
     }

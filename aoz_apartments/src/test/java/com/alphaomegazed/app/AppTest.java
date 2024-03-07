@@ -2,14 +2,15 @@ package com.alphaomegazed.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.junit.jupiter.api.Assertions;
+import com.alphaomegazed.aoz_apartments.AozApartmentsApplication;
 
 /**
  * Unit test for simple App. Where did you see the simple???
  */
-@SpringBootTest
-@ActiveProfiles("test")
+@SpringBootTest(classes = AozApartmentsApplication.class)
+@EnableJpaRepositories("com.alphaomegazed.aoz_apartments.repository_interfaces")
 public class AppTest {
 
     /**
