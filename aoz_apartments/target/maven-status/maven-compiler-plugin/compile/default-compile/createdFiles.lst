@@ -1,0 +1,13 @@
+com\alphaomegazed\aoz_apartments\service\ApartmentService.class
+com\alphaomegazed\aoz_apartments\service\UserService.class
+com\alphaomegazed\aoz_apartments\security\WebSecurityConfig.class
+com\alphaomegazed\aoz_apartments\dto\UserCreationDto.class
+com\alphaomegazed\aoz_apartments\model\Apartment.class
+com\alphaomegazed\aoz_apartments\repository_interfaces\UserRepository.class
+com\alphaomegazed\aoz_apartments\controller\UserController.class
+com\alphaomegazed\aoz_apartments\repository_interfaces\ApartmentRepository.class
+com\alphaomegazed\app\App.class
+com\alphaomegazed\aoz_apartments\AozApartmentsApplication.class
+com\alphaomegazed\aoz_apartments\service\UserDetailService.class
+com\alphaomegazed\aoz_apartments\controller\ApartmentController.class
+com\alphaomegazed\aoz_apartments\model\UserModel.class

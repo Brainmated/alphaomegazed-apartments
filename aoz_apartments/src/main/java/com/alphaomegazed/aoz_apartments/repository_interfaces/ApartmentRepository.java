@@ -1,6 +1,6 @@
-package main.java.com.alphaomegazed.aoz_apartments.repository_interfaces;
+package com.alphaomegazed.aoz_apartments.repository_interfaces;
 
-import main.java.com.alphaomegazed.aoz_apartments.model.Apartment;
+import com.alphaomegazed.aoz_apartments.model.Apartment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;

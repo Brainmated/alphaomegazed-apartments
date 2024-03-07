@@ -1,8 +1,10 @@
-package main.java.com.alphaomegazed.aoz_apartments.controller;
+package com.alphaomegazed.aoz_apartments.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import main.java.com.alphaomegazed.aoz_apartments.model.Apartment;
+import com.alphaomegazed.aoz_apartments.model.Apartment;
+import com.alphaomegazed.aoz_apartments.service.ApartmentService;
 import java.util.List;
 
 /* This class handles http request and responses and maps them.
@@ -24,8 +26,10 @@ public class ApartmentController {
     }
 
     @GetMapping("/{id}")
-    public Apartment getApartmentById(@PathVariable Long id) {
-        return apartmentService.getApartmentById(id);
+    public ResponseEntity<Apartment> getApartmentById(@PathVariable Long id) {
+        return apartmentService.getApartmentById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")

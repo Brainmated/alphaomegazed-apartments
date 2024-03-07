@@ -1,4 +1,4 @@
-package main.java.com.alphaomegazed.aoz_apartments.model;
+package com.alphaomegazed.aoz_apartments.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue; //corrected import instead of javax.ann
 
 @Entity
 @Table(name = "users") // create a table for a start
-public class User {
+public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

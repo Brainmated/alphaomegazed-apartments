@@ -3,7 +3,7 @@ E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\jav
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\controller\UserController.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\dto\UserCreationDto.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\model\Apartment.java
-E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\model\User.java
+E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\model\UserModel.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\repository_interfaces\ApartmentRepository.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\repository_interfaces\UserRepository.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\security\WebSecurityConfig.java

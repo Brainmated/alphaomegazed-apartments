@@ -29,6 +29,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Junit Jupiter Api -->
+		<dependency>
+        	<groupId>org.junit.jupiter</groupId>
+        	<artifactId>junit-jupiter-api</artifactId>
+        	<version>5.10.1</version> <!-- latest most stable jupiter build -->
+        	<scope>test</scope>
+    	</dependency>
+		<!-- Junit Jupiter Engine-->
+		<dependency>
+        	<groupId>org.junit.jupiter</groupId>
+        	<artifactId>junit-jupiter-engine</artifactId>
+        	<version>5.10.1</version> <!-- latest most stable jupiter build -->
+        	<scope>test</scope>
+    	</dependency>
 		<!-- Microsoft SQL server -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
@@ -44,7 +58,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope> <!-- figure what this does now -->
+			<scope>test</scope> <!-- Figured it. Test purposes. -->
 		</dependency>
 		<!-- Spring Boot Security -->
 		<dependency>
@@ -72,6 +86,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.2.3</version>
 			</plugin>
 			<plugin>
             	<groupId>org.apache.maven.plugins</groupId>

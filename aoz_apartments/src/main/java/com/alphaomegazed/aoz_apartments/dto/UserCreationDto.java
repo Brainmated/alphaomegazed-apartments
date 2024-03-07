@@ -1,4 +1,4 @@
-package main.java.com.alphaomegazed.aoz_apartments.dto;
+package com.alphaomegazed.aoz_apartments.dto;
 
 public class UserCreationDto {
     private String username;

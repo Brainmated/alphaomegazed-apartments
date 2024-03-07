@@ -1,4 +1,4 @@
-package main.java.com.alphaomegazed.aoz_apartments.model;
+package com.alphaomegazed.aoz_apartments.model;
 
 import javax.persistence.*;
 import java.util.Map;
@@ -47,7 +47,7 @@ public class Apartment {
         return id;
     }
 
-    public Byte getPicture() {
+    public String getPicture() {
         return picture;
     }
 
