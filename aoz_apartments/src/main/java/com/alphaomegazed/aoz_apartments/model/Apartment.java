@@ -5,7 +5,6 @@ import javax.persistence.*;
 import java.util.Map;
 
 @Entity
-@Table(name = "apartment")
 public class Apartment {
 
     @Id

@@ -9,7 +9,6 @@ import com.alphaomegazed.aoz_apartments.model.UserModel;
 
 //Logic for User management
 @Service
-@Profile("regular")
 public class UserService {
 
     @Autowired

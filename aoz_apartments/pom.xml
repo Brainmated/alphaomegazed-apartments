@@ -29,6 +29,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Jakarta API -->
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 		<!-- Junit Jupiter Api -->
 		<dependency>
         	<groupId>org.junit.jupiter</groupId>
@@ -43,11 +49,11 @@
         	<version>5.10.1</version> <!-- latest most stable jupiter build -->
         	<scope>test</scope>
     	</dependency>
-		<!-- Microsoft SQL server -->
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
-			<scope>runtime</scope>
+			<version>12.6.1.jre11</version>
 		</dependency>
 		<!-- Hibernate -->
 		<dependency>

@@ -4,8 +4,6 @@ import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,7 +16,6 @@ import com.alphaomegazed.aoz_apartments.repository_interfaces.UserRepository;
 import com.alphaomegazed.aoz_apartments.model.UserModel;
 
 @Service
-@Profile("regular")
 public class UserDetailService implements UserDetailsService {
 
     @Autowired

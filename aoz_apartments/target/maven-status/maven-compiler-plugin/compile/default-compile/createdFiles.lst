@@ -1,4 +1,5 @@
 com\alphaomegazed\aoz_apartments\service\ApartmentService.class
+com\alphaomegazed\aoz_apartments\ActiveProfiles.class
 com\alphaomegazed\aoz_apartments\service\UserService.class
 com\alphaomegazed\aoz_apartments\security\WebSecurityConfig.class
 com\alphaomegazed\aoz_apartments\dto\UserCreationDto.class

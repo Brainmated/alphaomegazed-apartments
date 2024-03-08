@@ -1,18 +1,12 @@
 package com.alphaomegazed.aoz_apartments.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import org.springframework.context.annotation.Profile;
-
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Column;
-import javax.persistence.GenerationType; //included for identity strategy
-import javax.persistence.GeneratedValue; //corrected import instead of javax.annotation
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
-@Table(name = "users") // create a table for a start
 public class UserModel {
 
     @Id
