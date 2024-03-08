@@ -19,7 +19,7 @@ public class ApartmentController {
         this.apartmentService = apartmentService;
     }
 
-    @PostMapping
+    @PostMapping("/apartments")
     public Apartment createApartment(@RequestBody Apartment apartment) {
         return apartmentService.createApartment(apartment);
     }
