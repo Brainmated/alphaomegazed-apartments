@@ -5,7 +5,6 @@ import java.util.function.Function;
 import javax.crypto.SecretKey;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import com.alphaomegazed.aoz_apartments.repository_interfaces.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -17,7 +16,7 @@ import com.alphaomegazed.aoz_apartments.model.UserModel;
 @Service
 public class JwtService {
 
-    private final String SECRET_KEY = ";P1%4dhn?_'*^l9@l+U)`b=^]5H]msDX$'MF_v(Sa[%%>T/V0^";
+    private final String SECRET_KEY = "b493d48364afe44d11c0165cf470a4164d1e2609911ef998be868d46ade3de4e";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -58,7 +57,6 @@ public class JwtService {
                 .expiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
                 .signWith(getSigninKey())
                 .compact();
-
         return token;
     }
 
