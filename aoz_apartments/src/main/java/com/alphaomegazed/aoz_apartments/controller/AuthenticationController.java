@@ -10,6 +10,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+/*
+#Overview
+This REST Controller class is repsonsible for handling authentication requests.
+It includes user registration and login.
+
+#Standout Variables
+'authService' being the service layer for the controller to perform authentication operations.
+*/
 @RestController
 public class AuthenticationController {
 
@@ -19,6 +27,10 @@ public class AuthenticationController {
         this.authService = authService;
     }
 
+    /*
+    #Takes a UserModel object containing user registration details.
+    #Returns a registration response with an authentication token.
+    */
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody UserModel request) {
@@ -27,6 +39,9 @@ public class AuthenticationController {
 
     }
 
+    /*
+    #Returns an authentication token on a succesful login.
+    */
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(
             @RequestBody UserModel request) {
