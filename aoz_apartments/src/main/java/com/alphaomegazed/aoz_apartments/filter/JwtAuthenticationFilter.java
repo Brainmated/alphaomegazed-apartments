@@ -18,6 +18,15 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/*
+#Overview
+This class extends OncePerRequestFilter to ensure that it is applied once per request.
+It is used to authenticate users based on a JWT provided by the HTTP request header(bearer).
+
+#Standout Variables
+'jwtService' is a service layer that handles the JWT related functionality in extracting usernames and validating tokens.
+'userDetailsService' loads user-specific data to fetch a username, a password and a role.
+*/
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
@@ -29,6 +38,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         this.userDetailsService = userDetailsService;
     }
 
+    /*
+    #Executed once per HTTP request.
+    #Extracts the token for validation and sets the 'SecurityContextHolder' authentication.
+    #If the token is invalid or non existant, then it continues to the filter chain without authentication.
+    #filterChain represents the chain of filters that the request should go through.
+    */
     @Override
     protected void doFilterInternal(
             @NonNull HttpServletRequest request,
