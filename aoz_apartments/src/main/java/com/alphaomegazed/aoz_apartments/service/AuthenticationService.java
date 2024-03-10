@@ -48,7 +48,7 @@ public class AuthenticationService {
         UserModel user = new UserModel();
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRole(user.getRole());
+        user.setRole(request.getRole());
 
         user = userRepository.save(user);
 
