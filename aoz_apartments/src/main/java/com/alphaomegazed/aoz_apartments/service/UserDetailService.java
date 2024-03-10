@@ -8,6 +8,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/*
+#Overview
+This service class implements the 'UserDetailsService' interface from Spring Security.
+It's responsible for retrieving the user details from the data persistence layer.
+
+#Standout Variables
+'userRepository' is an instance of the UserRepository interface which is used to perform CRUD operations on the 'UserModel' entity.
+*/
 @Service
 public class UserDetailService implements UserDetailsService {
 
@@ -18,6 +26,11 @@ public class UserDetailService implements UserDetailsService {
         this.userRepository = userRepository;
     }
 
+    /*
+    #Retrieves the user by their username using the userRepository interface.
+    #Returns the object containing the user's information if the user is found.
+    #Throws exception if the user is not found.
+    */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username)
