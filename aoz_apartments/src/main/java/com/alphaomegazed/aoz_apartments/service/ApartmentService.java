@@ -3,7 +3,6 @@ package com.alphaomegazed.aoz_apartments.service;
 import com.alphaomegazed.aoz_apartments.model.Apartment;
 import com.alphaomegazed.aoz_apartments.repository_interfaces.ApartmentRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +12,6 @@ public class ApartmentService {
 
     private final ApartmentRepository apartmentRepository;
 
-    @Autowired
     public ApartmentService(ApartmentRepository apartmentRepository) {
         this.apartmentRepository = apartmentRepository;
     }

@@ -18,7 +18,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class UserModel implements UserDetails {
 
     @Id

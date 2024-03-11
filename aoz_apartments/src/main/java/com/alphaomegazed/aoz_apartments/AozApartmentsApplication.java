@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.alphaomegazed.aoz_apartments", "com.alphaomegazed.aoz_apartments.service" })
-@EntityScan("com.alphaomegazed.aoz_apartments.model")
+@ComponentScan(basePackages = { "com.alphaomegazed.aoz_apartments.*" })
+@EntityScan(basePackages = "com.alphaomegazed.aoz_apartments.model")
 @EnableJpaRepositories(basePackages = "com.alphaomegazed.aoz_apartments.repository_interfaces")
 
 public class AozApartmentsApplication {

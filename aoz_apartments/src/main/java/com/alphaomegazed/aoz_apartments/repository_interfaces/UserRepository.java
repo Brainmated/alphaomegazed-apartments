@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional; //this is part of the java.util package, but it needs to be included
 
+@Repository
 public interface UserRepository extends JpaRepository<UserModel, Long> {
 
     // Used by UserDetailService to define wether or not the user exists

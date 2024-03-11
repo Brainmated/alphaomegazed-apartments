@@ -1,21 +1,29 @@
 package com.alphaomegazed.aoz_apartments.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import java.util.Map;
 
 @Entity
+@Table(name = "apartments")
 public class Apartment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "Picture", nullable = false)
     private String picture;
+    @Column(name = "address", nullable = false)
     private String address;
+    @Column(name = "area", nullable = false)
     private double area;
+    @Column(name = "monthlyRent", nullable = false)
     private double monthlyRent;
 
     @ElementCollection
+    @CollectionTable(name = "apartment_rooms", joinColumns = @JoinColumn(name = "apartment_id"))
+    @MapKeyColumn(name = "room_type")
+    @Column(name = "count")
     private Map<String, Integer> rooms;
 
     // Setters--------------------------------------
