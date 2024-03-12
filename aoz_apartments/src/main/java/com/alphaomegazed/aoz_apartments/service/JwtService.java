@@ -1,6 +1,6 @@
 package com.alphaomegazed.aoz_apartments.service;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.function.Function;
 import javax.crypto.SecretKey;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,51 +26,52 @@ public class JwtService {
     private final String SECRET_KEY = "b493d48364afe44d11c0165cf470a4164d1e2609911ef998be868d46ade3de4e";
 
     /*
-    #Extracts the username fro the JWT token.
-    #Return the username as a string
-    */
+     * #Extracts the username fro the JWT token.
+     * #Return the username as a string
+     */
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
 
     /*
-    #Validates the given JWT token against user details.
-    #Checks of the token's username matches the 'UserDetails' username and whether the token is expired.
-    #Return true if the token is valid.
-    */
+     * #Validates the given JWT token against user details.
+     * #Checks of the token's username matches the 'UserDetails' username and
+     * whether the token is expired.
+     * #Return true if the token is valid.
+     */
     public boolean isValid(String token, UserDetails user) {
         String username = extractUsername(token);
         return (username.equals(user.getUsername())) && !isTokenExpired(token);
     }
 
     /*
-    #Checks if the token has expired based on the expiration claim.
-    */
+     * #Checks if the token has expired based on the expiration claim.
+     */
     private boolean isTokenExpired(String token) {
-        return extractExpiration(token).before(new Date(0));
+        return extractExpiration(token).before(new Date());
     }
 
     /*
-    #Extracts the expiration date from the JWT token.
-    #Returns the expiration date as a 'java.sql.Date' object.
-    */
+     * #Extracts the expiration date from the JWT token.
+     * #Returns the expiration date as a 'java.sql.Date' object.
+     */
     private Date extractExpiration(String token) {
         return (Date) extractClaim(token, Claims::getExpiration);
     }
 
     /*
-    #Extracts a claim from the token using the claims resolver function.
-    #Returns the claim value
-    */
+     * #Extracts a claim from the token using the claims resolver function.
+     * #Returns the claim value
+     */
     public <T> T extractClaim(String token, Function<Claims, T> resolver) {
         Claims claims = extractAllClaims(token);
         return resolver.apply(claims);
     }
 
     /*
-    #Extracts all claims from the JWT token after verifying with the signing key.
-    #Return the 'Claims' object containing all token claims.
-    */
+     * #Extracts all claims from the JWT token after verifying with the signing key.
+     * #Return the 'Claims' object containing all token claims.
+     */
     private Claims extractAllClaims(String token) {
         return Jwts
                 .parser()
@@ -81,11 +82,12 @@ public class JwtService {
     }
 
     /*
-    #Generates a JWT token for the given 'UserModel'.
-    #Sets username as subject, issues the current timestamp as the date and sets expiration 1 day after creation.
-    #Signs the token with the signing key.
-    #Returns the JWT token as a string.
-    */
+     * #Generates a JWT token for the given 'UserModel'.
+     * #Sets username as subject, issues the current timestamp as the date and sets
+     * expiration 1 day after creation.
+     * #Signs the token with the signing key.
+     * #Returns the JWT token as a string.
+     */
     public String generateToken(UserModel user) {
         String token = Jwts
                 .builder()
@@ -98,9 +100,10 @@ public class JwtService {
     }
 
     /*
-    #Decodes the 'SECRET_KEY' from Base64URL to a byte array and construct a 'SecretKey'.
-    #Return the SecretKey.
-    */
+     * #Decodes the 'SECRET_KEY' from Base64URL to a byte array and construct a
+     * 'SecretKey'.
+     * #Return the SecretKey.
+     */
     private SecretKey getSigninKey() {
         byte[] keyBytes = Decoders.BASE64URL.decode(SECRET_KEY);
         return Keys.hmacShaKeyFor(keyBytes);

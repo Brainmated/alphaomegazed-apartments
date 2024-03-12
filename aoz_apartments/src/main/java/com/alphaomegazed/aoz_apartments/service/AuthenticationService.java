@@ -38,12 +38,12 @@ public class AuthenticationService {
     }
 
     /*
-    #Registers a new user with the provided user details.
-    #Encodes the password using PasswordEncoder.
-    #Persists the new user object using the UserRepository interface.
-    #Generates a JWT token for the newly registered user using 'JwtService'.
-    #Return the JWT token through the AuthenticationResponse.
-    */
+     * #Registers a new user with the provided user details.
+     * #Encodes the password using PasswordEncoder.
+     * #Persists the new user object using the UserRepository interface.
+     * #Generates a JWT token for the newly registered user using 'JwtService'.
+     * #Return the JWT token through the AuthenticationResponse.
+     */
     public AuthenticationResponse register(UserModel request) {
         UserModel user = new UserModel();
         user.setUsername(request.getUsername());
@@ -54,15 +54,16 @@ public class AuthenticationService {
 
         String token = jwtService.generateToken(user);
 
-        return new AuthenticationResponse(token);
+        return new AuthenticationResponse("User id has been registered.", token);
     }
 
     /*
-    #Authenticates the user using AuthenticationManager with the provided username and password.
-    #Fetches the usernames from the UserRepository.
-    #Throws exception if the user cant be found.
-    #Returns the JWT token.
-    */
+     * #Authenticates the user using AuthenticationManager with the provided
+     * username and password.
+     * #Fetches the usernames from the UserRepository.
+     * #Throws exception if the user cant be found.
+     * #Returns the JWT token.
+     */
     public AuthenticationResponse authenticate(UserModel request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -72,6 +73,6 @@ public class AuthenticationService {
         UserModel user = userRepository.findByUsername(request.getUsername()).orElseThrow();
         String token = jwtService.generateToken(user);
 
-        return new AuthenticationResponse(token);
+        return new AuthenticationResponse("Successful login for user id.", token);
     }
 }

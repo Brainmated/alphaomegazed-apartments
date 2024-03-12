@@ -28,24 +28,25 @@ public class AuthenticationController {
     }
 
     /*
-    #Takes a UserModel object containing user registration details.
-    #Returns a registration response with an authentication token.
-    */
+     * #Takes a UserModel object containing user registration details.
+     * #Returns a registration response with an authentication token.
+     */
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody UserModel request) {
-
-        return ResponseEntity.ok(authService.register(request));
+        AuthenticationResponse response = authService.register(request);
+        return ResponseEntity.ok(response);
 
     }
 
     /*
-    #Returns an authentication token on a succesful login.
-    */
+     * #Returns an authentication token on a succesful login.
+     */
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(
             @RequestBody UserModel request) {
-        return ResponseEntity.ok(authService.authenticate(request));
+        AuthenticationResponse response = authService.authenticate(request);
+        return ResponseEntity.ok(response);
     }
 
 }

@@ -1,13 +1,19 @@
 package com.alphaomegazed.aoz_apartments.service;
 
+import com.alphaomegazed.aoz_apartments.dto.RoomUpdateDto;
+import com.alphaomegazed.aoz_apartments.exception.ResourceNotFoundException;
 import com.alphaomegazed.aoz_apartments.model.Apartment;
 import com.alphaomegazed.aoz_apartments.repository_interfaces.ApartmentRepository;
+import com.alphaomegazed.aoz_apartments.exception.ResourceNotFoundException;
+import jakarta.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class ApartmentService {
 
     private final ApartmentRepository apartmentRepository;
@@ -26,10 +32,26 @@ public class ApartmentService {
         return apartmentRepository.findById(id);
     }
 
-    // Logic to update an existing apartment
-    public Apartment updateApartment(Long id, Apartment apartmentDetails) {
+    public Apartment addRoomsToApartment(Long id, List<RoomUpdateDto> roomUpdates) throws ResourceNotFoundException {
         Apartment apartment = apartmentRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Apartment not found."));
+                .orElseThrow(() -> new ResourceNotFoundException("Apartment not found with id: " + id));
+
+        Map<String, Integer> currentRooms = apartment.getRooms();
+        for (RoomUpdateDto update : roomUpdates) {
+            String roomType = update.getRoomType();
+            Integer roomCount = update.getRoomCount();
+            // Update the room count. If the room type doesn't exist, it will be added.
+            currentRooms.put(roomType, roomCount);
+        }
+        apartment.setRooms(currentRooms); // Update the apartment with the new rooms map
+
+        return apartmentRepository.save(apartment); // Save the updated apartment
+    }
+
+    // Logic to update an existing apartment
+    public Apartment updateApartment(Long id, Apartment apartmentDetails) throws ResourceNotFoundException {
+        Apartment apartment = apartmentRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Apartment not found with id: " + id));
 
         apartment.setPicture(apartmentDetails.getPicture());
         apartment.setAddress(apartmentDetails.getAddress());
@@ -43,9 +65,9 @@ public class ApartmentService {
     }
 
     // Logic to delete an apartment
-    public void deleteApartment(Long id) {
+    public void deleteApartment(Long id) throws ResourceNotFoundException {
         Apartment apartment = apartmentRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Apartment not found."));
+                .orElseThrow(() -> new ResourceNotFoundException("Apartment not found with id: " + id));
 
         apartmentRepository.delete(apartment);
     }
