@@ -40,18 +40,19 @@ public class SecurityConfig {
     }
 
     /*
-    #This method defines the chain that applies to HTTP requests.
-    #Disables csrf protection since the authentication is stateless.
-    #Configures requests and allows public access to /register and /login.
-    #Sets jwtAuthenticationFilter before UsernamePassowrdAuthenticationFilter to intercept and process JWT tokens. 
-    */
+     * #This method defines the chain that applies to HTTP requests.
+     * #Disables csrf protection since the authentication is stateless.
+     * #Configures requests and allows public access to /register and /login.
+     * #Sets jwtAuthenticationFilter before UsernamePassowrdAuthenticationFilter to
+     * intercept and process JWT tokens.
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
-                        req -> req.requestMatchers("/login/**", "/register**")
+                        req -> req.requestMatchers("/login/**", "/register**", "/apartments/**")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated())
@@ -62,13 +63,14 @@ public class SecurityConfig {
                 .build();
     }
 
-    //This method returns a BCryptPasswordEncoder instance to be used for hashing passwords.
+    // This method returns a BCryptPasswordEncoder instance to be used for hashing
+    // passwords.
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    //This method retrieves and returns AuthenticationManager from Spring Security.
+    // This method retrieves and returns AuthenticationManager from Spring Security.
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();

@@ -23,7 +23,7 @@ public class Apartment {
     @ElementCollection
     @CollectionTable(name = "apartment_rooms", joinColumns = @JoinColumn(name = "apartment_id"))
     @MapKeyColumn(name = "room_type")
-    @Column(name = "count")
+    @Column(name = "room_count")
     private Map<String, Integer> rooms;
 
     // Setters--------------------------------------
