@@ -5,6 +5,7 @@ E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\jav
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\controller\AuthenticationController.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\dto\RoomUpdateDto.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\dto\UserCreationDto.java
+E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\exception\AuthenticationSuccessHandler.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\exception\ErrorDetails.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\exception\GlobalExceptionHandler.java
 E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\src\main\java\com\alphaomegazed\aoz_apartments\exception\ResourceNotFoundException.java

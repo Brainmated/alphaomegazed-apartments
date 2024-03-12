@@ -35,6 +35,9 @@ public class UserModel implements UserDetails {
     @Enumerated(value = EnumType.STRING)
     Role role;
 
+    @Column(name = "account_non_locked")
+    private boolean accountNonLocked = true;
+
     // Getters-------------------------------------------------
     public Long getId() {
         return id;
@@ -69,6 +72,10 @@ public class UserModel implements UserDetails {
         this.role = role;
     }
 
+    public void setAccountNonLocked(boolean accountNonLocked) {
+        this.accountNonLocked = accountNonLocked;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // TODO Auto-generated method stub
@@ -77,18 +84,18 @@ public class UserModel implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return accountNonLocked;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
         // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override

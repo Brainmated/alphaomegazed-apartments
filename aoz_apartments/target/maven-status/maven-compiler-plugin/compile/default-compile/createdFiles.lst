@@ -6,6 +6,7 @@ com\alphaomegazed\aoz_apartments\dto\UserCreationDto.class
 com\alphaomegazed\aoz_apartments\config\SecurityConfig.class
 com\alphaomegazed\aoz_apartments\repository_interfaces\ApartmentRepository.class
 com\alphaomegazed\app\App.class
+com\alphaomegazed\aoz_apartments\exception\AuthenticationSuccessHandler.class
 com\alphaomegazed\aoz_apartments\model\AuthenticationResponse.class
 com\alphaomegazed\aoz_apartments\AozApartmentsApplication.class
 com\alphaomegazed\aoz_apartments\exception\ResourceNotFoundException.class

@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -70,7 +71,16 @@ public class AuthenticationService {
                         request.getUsername(),
                         request.getPassword()));
 
-        UserModel user = userRepository.findByUsername(request.getUsername()).orElseThrow();
+        UserModel user = userRepository.findByUsername(request.getUsername())
+                .orElseThrow(
+                        () -> new UsernameNotFoundException("User not found with username: " + request.getUsername()));
+
+        // Unlock the user account if it was locked
+        if (!user.isAccountNonLocked()) {
+            user.setAccountNonLocked(true);
+            userRepository.save(user);
+        }
+
         String token = jwtService.generateToken(user);
 
         return new AuthenticationResponse("Successful login for user id.", token);

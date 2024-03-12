@@ -1,34 +1,55 @@
-2024-03-12T12:42:27.894+02:00  INFO 19328 --- [main] c.a.a.AozApartmentsApplication           : Starting AozApartmentsApplication v0.0.1-SNAPSHOT using Java 21.0.2 with PID 19328 (E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target\aoz_apartments-0.0.1-SNAPSHOT.jar started by alsyn in E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target)
-2024-03-12T12:42:27.897+02:00  INFO 19328 --- [main] c.a.a.AozApartmentsApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-03-12T12:42:28.307+02:00  INFO 19328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-12T12:42:28.342+02:00  INFO 19328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-2024-03-12T12:42:28.923+02:00  INFO 19328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-12T12:42:28.933+02:00  INFO 19328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12T12:42:28.933+02:00  INFO 19328 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-12T12:42:28.969+02:00  INFO 19328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-12T12:42:28.970+02:00  INFO 19328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1018 ms
-2024-03-12T12:42:29.091+02:00  INFO 19328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-12T12:42:29.151+02:00  INFO 19328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-12T12:42:29.184+02:00  INFO 19328 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-12T12:42:29.393+02:00  INFO 19328 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-12T12:42:29.427+02:00  INFO 19328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-12T12:42:29.662+02:00  INFO 19328 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 2b3c0487-7665-4c0a-a400-00af11e877c5
-2024-03-12T12:42:29.664+02:00  INFO 19328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-12T12:42:30.407+02:00  INFO 19328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-12T12:42:30.755+02:00  INFO 19328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-12T12:42:31.160+02:00  WARN 19328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-12T12:42:31.372+02:00  INFO 19328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c5cb013, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f69462f, org.springframework.security.web.context.SecurityContextHolderFilter@563bd6a4, org.springframework.security.web.header.HeaderWriterFilter@4dc16fc9, org.springframework.web.filter.CorsFilter@432b883, org.springframework.security.web.authentication.logout.LogoutFilter@2318651f, com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter@790f4933, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@235dacd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74070994, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f09c282, org.springframework.security.web.session.SessionManagementFilter@28796d0e, org.springframework.security.web.access.ExceptionTranslationFilter@9d7a853, org.springframework.security.web.access.intercept.AuthorizationFilter@126e2710]
-2024-03-12T12:42:31.533+02:00  INFO 19328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-12T12:42:31.545+02:00  INFO 19328 --- [main] c.a.a.AozApartmentsApplication           : Started AozApartmentsApplication in 4.022 seconds (process running for 4.391)
-2024-03-12T12:43:00.524+02:00  INFO 19328 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-12T12:43:00.525+02:00  INFO 19328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-12T12:43:00.526+02:00  INFO 19328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-12T12:43:00.539+02:00 DEBUG 19328 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /register
-2024-03-12T12:43:00.745+02:00 ERROR 19328 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+2024-03-12T13:02:48.629+02:00  INFO 8492 --- [main] c.a.a.AozApartmentsApplication           : Starting AozApartmentsApplication v0.0.1-SNAPSHOT using Java 21.0.2 with PID 8492 (E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target\aoz_apartments-0.0.1-SNAPSHOT.jar started by alsyn in E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target)
+2024-03-12T13:02:48.631+02:00  INFO 8492 --- [main] c.a.a.AozApartmentsApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-03-12T13:02:49.052+02:00  INFO 8492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-12T13:02:49.088+02:00  INFO 8492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2024-03-12T13:02:49.685+02:00  INFO 8492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-12T13:02:49.696+02:00  INFO 8492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-12T13:02:49.697+02:00  INFO 8492 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-12T13:02:49.728+02:00  INFO 8492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-12T13:02:49.729+02:00  INFO 8492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2024-03-12T13:02:49.850+02:00  INFO 8492 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-12T13:02:49.903+02:00  INFO 8492 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-12T13:02:49.936+02:00  INFO 8492 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-12T13:02:50.126+02:00  INFO 8492 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-12T13:02:50.160+02:00  INFO 8492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-12T13:02:50.396+02:00  INFO 8492 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0918ad5d-cb0e-40d1-a51d-f04e26663d9a
+2024-03-12T13:02:50.399+02:00  INFO 8492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-12T13:02:51.131+02:00  INFO 8492 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-12T13:02:51.489+02:00  INFO 8492 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-12T13:02:51.905+02:00  WARN 8492 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-12T13:02:52.120+02:00  INFO 8492 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79a92277, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7712df76, org.springframework.security.web.context.SecurityContextHolderFilter@13fad0c7, org.springframework.security.web.header.HeaderWriterFilter@1529d534, org.springframework.web.filter.CorsFilter@e98adb2, org.springframework.security.web.authentication.logout.LogoutFilter@c7b100b, com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter@eb1e868, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d2f910b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f451970, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c3d0ff8, org.springframework.security.web.session.SessionManagementFilter@560c3758, org.springframework.security.web.access.ExceptionTranslationFilter@34525143, org.springframework.security.web.access.intercept.AuthorizationFilter@5cca5ff3]
+2024-03-12T13:02:52.277+02:00  INFO 8492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-12T13:02:52.290+02:00  INFO 8492 --- [main] c.a.a.AozApartmentsApplication           : Started AozApartmentsApplication in 4.043 seconds (process running for 4.415)
+2024-03-12T13:04:06.332+02:00  INFO 8492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-12T13:04:06.332+02:00  INFO 8492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-12T13:04:06.337+02:00  INFO 8492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-12T13:04:06.350+02:00 DEBUG 8492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /register
+2024-03-12T13:04:06.355+02:00 DEBUG 8492 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-03-12T13:04:06.357+02:00 DEBUG 8492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /register
+2024-03-12T13:05:53.964+02:00 DEBUG 8492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /login
+2024-03-12T13:05:54.114+02:00 DEBUG 8492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /login
+2024-03-12T13:05:54.234+02:00 DEBUG 8492 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-03-12T13:07:28.850+02:00 DEBUG 8492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /apartments
+2024-03-12T13:07:28.863+02:00 DEBUG 8492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /apartments
+2024-03-12T13:08:02.246+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /apartments
+2024-03-12T13:08:02.262+02:00 ERROR 8492 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 
-java.lang.NullPointerException: Cannot invoke "com.alphaomegazed.aoz_apartments.model.Role.name()" because "this.role" is null
-	at com.alphaomegazed.aoz_apartments.model.UserModel.getAuthorities(UserModel.java:75) ~[!/:0.0.1-SNAPSHOT]
-	at com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:72) ~[!/:0.0.1-SNAPSHOT]
+org.springframework.orm.jpa.JpaSystemException: Null value was assigned to a property [class com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked] of primitive type: 'com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked' (setter)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy121.findByUsername(Unknown Source) ~[na:na]
+	at com.alphaomegazed.aoz_apartments.service.UserDetailService.loadUserByUsername(UserDetailService.java:36) ~[!/:0.0.1-SNAPSHOT]
+	at com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:68) ~[!/:0.0.1-SNAPSHOT]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.2.jar!/:6.2.2]
@@ -89,53 +110,205 @@ java.lang.NullPointerException: Cannot invoke "com.alphaomegazed.aoz_apartments.
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar!/:na]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar!/:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.PropertyAccessException: Null value was assigned to a property [class com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked] of primitive type: 'com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked' (setter)
+	at org.hibernate.property.access.spi.SetterFieldImpl.set(SetterFieldImpl.java:63) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.setPropertyValues(AbstractEntityPersister.java:4476) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeEntityInstance(AbstractEntityInitializer.java:853) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeEntity(AbstractEntityInitializer.java:813) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeInstance(AbstractEntityInitializer.java:799) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:70) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:109) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:86) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:203) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:137) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:415) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy134.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	... 69 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked to null value
+	at java.base/jdk.internal.reflect.FieldAccessorImpl.throwSetIllegalArgumentException(FieldAccessorImpl.java:228) ~[na:na]
+	at java.base/jdk.internal.reflect.FieldAccessorImpl.throwSetIllegalArgumentException(FieldAccessorImpl.java:232) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleBooleanFieldAccessorImpl.set(MethodHandleBooleanFieldAccessorImpl.java:111) ~[na:na]
+	at java.base/java.lang.reflect.Field.set(Field.java:836) ~[na:na]
+	at org.hibernate.property.access.spi.SetterFieldImpl.set(SetterFieldImpl.java:57) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	... 108 common frames omitted
 
-2024-03-12T12:43:00.754+02:00 DEBUG 19328 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
-2024-03-12T12:43:00.756+02:00 DEBUG 19328 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-12T12:43:00.757+02:00 DEBUG 19328 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-03-12T12:43:17.663+02:00  INFO 19328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-12T12:43:17.665+02:00  INFO 19328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-12T12:43:17.668+02:00  INFO 19328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-12T12:43:52.287+02:00  INFO 17992 --- [main] c.a.a.AozApartmentsApplication           : Starting AozApartmentsApplication v0.0.1-SNAPSHOT using Java 21.0.2 with PID 17992 (E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target\aoz_apartments-0.0.1-SNAPSHOT.jar started by alsyn in E:\Programming\applications\alphaomegazed-apartments\aoz_apartments\target)
-2024-03-12T12:43:52.289+02:00  INFO 17992 --- [main] c.a.a.AozApartmentsApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-03-12T12:43:52.703+02:00  INFO 17992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-12T12:43:52.741+02:00  INFO 17992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2024-03-12T12:43:53.320+02:00  INFO 17992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-12T12:43:53.330+02:00  INFO 17992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12T12:43:53.330+02:00  INFO 17992 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-12T12:43:53.358+02:00  INFO 17992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-12T12:43:53.359+02:00  INFO 17992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1013 ms
-2024-03-12T12:43:53.478+02:00  INFO 17992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-12T12:43:53.541+02:00  INFO 17992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-12T12:43:53.576+02:00  INFO 17992 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-12T12:43:53.791+02:00  INFO 17992 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-12T12:43:53.825+02:00  INFO 17992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-12T12:43:54.068+02:00  INFO 17992 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 8fbde2b7-5911-44a9-ab58-30072dd7dbf1
-2024-03-12T12:43:54.070+02:00  INFO 17992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-12T12:43:54.812+02:00  INFO 17992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-12T12:43:55.163+02:00  INFO 17992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-12T12:43:55.540+02:00  WARN 17992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-12T12:43:55.740+02:00  INFO 17992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f3a529f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ce8b59e, org.springframework.security.web.context.SecurityContextHolderFilter@27422187, org.springframework.security.web.header.HeaderWriterFilter@533a27f8, org.springframework.web.filter.CorsFilter@5aa5b3af, org.springframework.security.web.authentication.logout.LogoutFilter@208b8425, com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter@3d42b756, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ee126de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22cce199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@344cf00f, org.springframework.security.web.session.SessionManagementFilter@1028a747, org.springframework.security.web.access.ExceptionTranslationFilter@304704ae, org.springframework.security.web.access.intercept.AuthorizationFilter@46aea9f7]
-2024-03-12T12:43:55.893+02:00  INFO 17992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-12T12:43:55.905+02:00  INFO 17992 --- [main] c.a.a.AozApartmentsApplication           : Started AozApartmentsApplication in 3.994 seconds (process running for 4.367)
-2024-03-12T12:44:14.591+02:00  INFO 17992 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-12T12:44:14.592+02:00  INFO 17992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-12T12:44:14.593+02:00  INFO 17992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-03-12T12:44:14.606+02:00 DEBUG 17992 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /register
-2024-03-12T12:44:14.612+02:00 DEBUG 17992 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-12T12:44:14.613+02:00 DEBUG 17992 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /register
-2024-03-12T12:44:20.546+02:00 DEBUG 17992 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /register
-2024-03-12T12:44:20.546+02:00 DEBUG 17992 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-12T12:44:20.547+02:00 DEBUG 17992 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /register
-2024-03-12T12:44:20.613+02:00  WARN 17992 --- [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 2627, SQLState: 23000
-2024-03-12T12:44:20.613+02:00 ERROR 17992 --- [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Violation of UNIQUE KEY constraint 'UK_r43af9ap4edm43mmtq01oddj6'. Cannot insert duplicate key in object 'dbo.users'. The duplicate key value is (newAlex).
-2024-03-12T12:44:37.437+02:00 DEBUG 17992 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /register
-2024-03-12T12:44:37.437+02:00 DEBUG 17992 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-12T12:44:37.438+02:00 DEBUG 17992 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /register
-2024-03-12T12:44:52.715+02:00 DEBUG 17992 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /login
-2024-03-12T12:44:52.715+02:00 DEBUG 17992 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-12T12:44:52.716+02:00 DEBUG 17992 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /login
-2024-03-12T12:44:52.877+02:00 DEBUG 17992 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since user account is locked
-2024-03-12T12:46:12.853+02:00  INFO 17992 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-12T12:46:12.855+02:00  INFO 17992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-12T12:46:12.858+02:00  INFO 17992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-12T13:08:02.273+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-03-12T13:08:02.274+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-03-12T13:08:02.275+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-03-12T13:08:12.102+02:00 DEBUG 8492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /apartments
+2024-03-12T13:08:12.106+02:00 ERROR 8492 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.orm.jpa.JpaSystemException: Null value was assigned to a property [class com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked] of primitive type: 'com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked' (setter)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy121.findByUsername(Unknown Source) ~[na:na]
+	at com.alphaomegazed.aoz_apartments.service.UserDetailService.loadUserByUsername(UserDetailService.java:36) ~[!/:0.0.1-SNAPSHOT]
+	at com.alphaomegazed.aoz_apartments.filter.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:68) ~[!/:0.0.1-SNAPSHOT]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.2.jar!/:6.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar!/:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.PropertyAccessException: Null value was assigned to a property [class com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked] of primitive type: 'com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked' (setter)
+	at org.hibernate.property.access.spi.SetterFieldImpl.set(SetterFieldImpl.java:63) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.setPropertyValues(AbstractEntityPersister.java:4476) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeEntityInstance(AbstractEntityInitializer.java:853) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeEntity(AbstractEntityInitializer.java:813) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.graph.entity.AbstractEntityInitializer.initializeInstance(AbstractEntityInitializer.java:799) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:70) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:109) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:86) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:203) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:137) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:415) ~[spring-orm-6.1.4.jar!/:6.1.4]
+	at jdk.proxy2/jdk.proxy2.$Proxy134.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.3.jar!/:3.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.4.jar!/:6.1.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.4.jar!/:6.1.4]
+	... 69 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.alphaomegazed.aoz_apartments.model.UserModel.accountNonLocked to null value
+	at java.base/jdk.internal.reflect.FieldAccessorImpl.throwSetIllegalArgumentException(FieldAccessorImpl.java:228) ~[na:na]
+	at java.base/jdk.internal.reflect.FieldAccessorImpl.throwSetIllegalArgumentException(FieldAccessorImpl.java:232) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleBooleanFieldAccessorImpl.set(MethodHandleBooleanFieldAccessorImpl.java:111) ~[na:na]
+	at java.base/java.lang.reflect.Field.set(Field.java:836) ~[na:na]
+	at org.hibernate.property.access.spi.SetterFieldImpl.set(SetterFieldImpl.java:57) ~[hibernate-core-6.4.4.Final.jar!/:6.4.4.Final]
+	... 108 common frames omitted
+
+2024-03-12T13:08:12.112+02:00 DEBUG 8492 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-03-12T13:08:12.112+02:00 DEBUG 8492 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-03-12T13:08:12.112+02:00 DEBUG 8492 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-03-12T13:08:16.304+02:00 DEBUG 8492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /apartments
+2024-03-12T13:08:16.311+02:00 DEBUG 8492 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /apartments
+2024-03-12T13:08:25.810+02:00 DEBUG 8492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /apartments/
+2024-03-12T13:08:25.817+02:00 DEBUG 8492 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /apartments/
+2024-03-12T13:08:34.001+02:00 DEBUG 8492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /apartments/
+2024-03-12T13:08:34.006+02:00 DEBUG 8492 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /apartments/
+2024-03-12T13:08:37.397+02:00 DEBUG 8492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /apartments
+2024-03-12T13:08:37.402+02:00 DEBUG 8492 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /apartments
+2024-03-12T13:08:54.594+02:00 DEBUG 8492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /apartments
+2024-03-12T13:08:54.613+02:00 DEBUG 8492 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /apartments
+2024-03-12T13:08:58.799+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /apartments/
+2024-03-12T13:08:58.804+02:00 DEBUG 8492 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /apartments/
+2024-03-12T13:08:58.819+02:00  WARN 8492 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 547, SQLState: 23000
+2024-03-12T13:08:58.820+02:00 ERROR 8492 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__apartment__apart__5DCAEF64". The conflict occurred in database "aoz_apartments_db", table "dbo.Apartment", column 'id'.
+2024-03-12T13:09:12.701+02:00  INFO 8492 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-12T13:09:12.702+02:00  INFO 8492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-12T13:09:12.705+02:00  INFO 8492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
