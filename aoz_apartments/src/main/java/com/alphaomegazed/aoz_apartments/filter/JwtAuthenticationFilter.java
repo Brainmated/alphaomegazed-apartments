@@ -39,11 +39,14 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     /*
-    #Executed once per HTTP request.
-    #Extracts the token for validation and sets the 'SecurityContextHolder' authentication.
-    #If the token is invalid or non existant, then it continues to the filter chain without authentication.
-    #filterChain represents the chain of filters that the request should go through.
-    */
+     * #Executed once per HTTP request.
+     * #Extracts the token for validation and sets the 'SecurityContextHolder'
+     * authentication.
+     * #If the token is invalid or non existant, then it continues to the filter
+     * chain without authentication.
+     * #filterChain represents the chain of filters that the request should go
+     * through.
+     */
     @Override
     protected void doFilterInternal(
             @NonNull HttpServletRequest request,
@@ -74,7 +77,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         filterChain.doFilter(request, response);
-        throw new UnsupportedOperationException("Unimplemented method 'doFilterInternal'");
+        // throw new UnsupportedOperationException("Unimplemented method
+        // 'doFilterInternal'");
     }
 
 }
