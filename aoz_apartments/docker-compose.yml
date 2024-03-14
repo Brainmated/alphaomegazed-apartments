@@ -1,4 +1,4 @@
-version:
+version: "25.0.3"
 
 services:
   aoz-apartment-app:
@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-    - "8080:8080"
+      - "8080:8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:sqlserver://db:1433;databaseName=aoz_apartments_db;encrypt=true;trustServerCertificate=true
       - SPRING_DATASOURCE_USERNAME=admin
@@ -20,14 +20,16 @@ services:
       - LOGGING_FILE_NAME=logs/errorLog.log
     depends_on:
       - db
+
   db:
-  image: mcr.microsoft.com/mssql/server:2019-latest
-  environment:
-    SA_PASSWORD: "Str0ngestP0ssiblePassw0rd69420!"
-    ACCEPT_EULA: "Y"
-  ports:
-    - "1433:1433"
-  volumes:
-    - mssql_data:/var/opt/mssql
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Str0ngestP0ssiblePassw0rd69420!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
 volumes:
   mssql_data:
