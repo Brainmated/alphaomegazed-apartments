@@ -24,10 +24,12 @@ Using Postman
 Authenticating
 
 Before you can use the API endpoints, you need to authenticate and obtain a Bearer Token.
+
 Registration
 
     Set the request type to POST and the URL to localhost:8080/register endpoint.
     In the Body tab, switch to raw and select JSON. Enter the user credentials:
+
 
 json
 
