@@ -37,8 +37,8 @@ json
   "username": "newuser",
   "password": "newpassword",
   "role": "BASE_USER" 
-  #The user roles vary from BASE_USER, ADMIN and MODERATOR.
 }
+#The user roles vary from BASE_USER, ADMIN and MODERATOR.
 
     Send the request. You'll receive a response containing the authentication token.
     Example:
