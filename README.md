@@ -2,6 +2,7 @@ AOZ Apartments API Usage
 Overview
 
 This document serves as a guide for running and interacting with the AOZ Apartments API. It includes instructions on building and running Docker containers, using Postman to send requests, and information about authentication with Bearer Tokens.
+
 Building and Running the Container
 
     To build the Docker image, navigate to the directory containing the Dockerfile and run:
@@ -19,6 +20,7 @@ docker run -dp 8080:8080 aoz-apartments
 Replace 8080:8080 with the desired port mapping.
 
 Using Postman
+
 Authenticating
 
 Before you can use the API endpoints, you need to authenticate and obtain a Bearer Token.
